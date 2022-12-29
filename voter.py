@@ -1,5 +1,5 @@
 import sys
-organizer='Nikhitha'
+organizer='Anonymous'
 instructions='''INSTRUCTIONS: \n1. A voter can vote for only one candidate.
 2. A voter can only vote once.'''
 a='''\nThe candidates are A and B.\nPress a to vote for A.\nPress b to vote for B'''
@@ -34,7 +34,7 @@ while True:
   else:
      print('\nORGANIZERS SECTION: ')
      confirm=input('Enter your name: ')
-     if confirm=='Nikhitha':
+     if confirm==organizer:
          print('\nRESULTS:')
          if votes_for_a > votes_for_b:
              print(f'A has won with {votes_for_a} votes!\nCONGRATULATIONS A')
@@ -42,6 +42,8 @@ while True:
          elif votes_for_b > votes_for_a:
              print(f'B has won with {votes_for_b} votes!\nCONGRATULATIONS B')
              sys.exit()
+         elif votes_for_b==0 and votes_for_a==0:
+             print('No one has voted yet!')
          else:
              print('The results are tied!')
              sys.exit()
