@@ -44,6 +44,7 @@ while True:
              sys.exit()
          elif votes_for_b==0 and votes_for_a==0:
              print('No one has voted yet!')
+             sys.exit()
          else:
              print('The results are tied!')
              sys.exit()
